@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="p-10 max-w-3xl mx-auto">
+
+    <h2 class="text-3xl font-bold mb-6">CBC Enrollment - Kisii Campus</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <p class="p-3 mb-3 {{ category }}">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST" class="space-y-4 bg-white p-6 shadow rounded">
+
+        <input name="parent_name" placeholder="Parent/Guardian Name"
+               class="w-full p-2 border rounded">
+
+        <input name="learner_name" placeholder="Learner Name"
+               class="w-full p-2 border rounded">
+
+        <input name="grade" placeholder="Preferred Grade (CBC Level)"
+               class="w-full p-2 border rounded">
+
+        <button class="bg-navy text-white px-6 py-2 rounded">
+            Submit Application
+        </button>
+
+    </form>
+
+</section>
+
+{% endblock %}

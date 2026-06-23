@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hillfields Premier Academy & Junior School - Kisii</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- ================= NAVIGATION ================= -->
+<header class="sticky top-0 bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+
+        <h1 class="text-xl font-bold text-navy">
+            HILLFIELDS PREMIER ACADEMY - JUNIOR SCHOOL, KISII
+        </h1>
+
+        <nav class="space-x-6 font-medium">
+            <a href="/" class="hover:text-amber">Home</a>
+            <a href="/cbc-framework" class="hover:text-amber">CBC Framework</a>
+            <a href="/faculty" class="hover:text-amber">Faculty</a>
+            <a href="/enroll" class="hover:text-amber">Admissions</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="min-h-screen">
+    {% block content %}{% endblock %}
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-navy text-white p-6 text-center mt-10">
+    <p>
+        Fully compliant with Kenya Ministry of Education standards, KICD curriculum frameworks,
+        and Competency-Based Education (CBE) implementation guidelines.
+    </p>
+    <p class="text-sm mt-2">
+        Hillfields Premier Academy & Junior School — Kisii County, Kenya
+    </p>
+</footer>
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
